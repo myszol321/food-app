@@ -65,8 +65,11 @@ export const RecipeThumbnailStyled = styled.div`
   }
 `;
 
-export const RecipePage = styled.div`
+export const StyledRecipePage = styled.div`
   display: flex;
+  padding-top: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
   align-items: center;
   justify-content: center;
 `;

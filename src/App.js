@@ -5,8 +5,9 @@ import GlobalStyles from './components/styled/Global';
 
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import Favourites from './components/Favourites';
+import UserRecipes from './components/UserRecipes';
 import RecipePage from './components/RecipePage';
+import AddRecipe from './components/AddRecipe';
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path='/' element={<Home />} />
-          <Route exact path='/favourites' element={<Favourites />} />
-          <Route path='/recipe' element={<RecipePage />} />
+          <Route exact path='/yourRecipes' element={<UserRecipes />} />
+          <Route exact path='/addRecipe' element={<AddRecipe />} />
+          <Route path='/recipe/:recipeId' element={<RecipePage />} />
         </Routes>
       </div>
     </Router>

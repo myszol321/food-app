@@ -15,6 +15,10 @@ export const Nav = styled.nav`
   & > h2 {
     margin-left: 100px;
   }
+  & > h1:hover {
+    cursor: pointer;
+  }
+
   & > h2:hover {
     cursor: pointer;
   }

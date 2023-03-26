@@ -1,12 +1,10 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { FeedStyled } from './styled/Recipes.styled';
 import { useEffect } from 'react';
 
 import RecipeThumbnail from './RecipeThumbnail';
 
 export default function Feed() {
-  let navigate = useNavigate();
   const [randomRecipes, setRandomRecipes] = React.useState([]);
 
   useEffect(() => {
@@ -21,13 +19,8 @@ export default function Feed() {
     setRandomRecipes(data.recipes);
   };
 
-  const openRecipe = () => {
-    console.log('dupa');
-    // navigate(`/recipe/${id}`);
-  };
-
   const entries = randomRecipes.map((recipe) => {
-    return <RecipeThumbnail key={recipe.id} onClick={openRecipe} {...recipe} />;
+    return <RecipeThumbnail key={recipe.id} {...recipe} />;
   });
 
   return <FeedStyled>{entries}</FeedStyled>;
